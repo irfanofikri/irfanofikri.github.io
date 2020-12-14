@@ -1,0 +1,302 @@
+body{
+  background: #ffffff;
+  font-family: 'Arvo', serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.name {
+  margin: 10px 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.navigation-bar {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.fa-twitter{
+
+  color: black;
+}
+
+.fa-instagram {
+  color: black;
+}
+
+nav ul{
+  list-style: none;
+  padding:0;
+  margin:0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 20px 20px;
+  padding: 5px 0px;
+  position: relative;
+  --border-size: 3px;
+  
+}
+
+nav ul > li > a {
+  color:black;
+  width: 100px;
+  padding: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+ 
+}
+
+/*dropdown menu*/
+.dropbtn {
+  color:black;
+  width: 100px;
+  padding: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn::before{
+  content: '';
+  position: absolute;
+  height: var(--border-size);
+  background-color: lightgray;
+  transform: scaleX(0);
+  top: 0;
+  right:0;
+  left: 0;
+  transition: transform 300ms ease-in-out;
+}
+
+.dropbtn:hover::before,
+.dropbtn:focus::before{
+  transform: scaleX(1);
+}
+
+.dropdown-content {
+  color:black;
+  width: 120px;
+  padding: 10px;
+  font-size: 10px;
+  display: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: absolute;
+  text-align: left;
+
+  z-index: 1;
+  box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+  color:black;
+  width: 100px;
+  padding: 10px;
+  font-size: 10px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*dropdown animation*/
+.dropdown-content a:hover{background-color: #ddd;}
+.dropdown:hover .dropdown-content{
+  background-color: white;
+  display: block;
+}
+
+
+/*hover bar animation*/
+nav ul > li > a::before {
+  content: '';
+  position: absolute;
+  height: var(--border-size);
+  background-color: lightgray;
+  transform: scaleX(0);
+  top: 0;
+  right:0;
+  left: 0;
+  transition: transform 300ms ease-in-out;
+}
+
+nav ul > li > a:hover::before,
+nav ul > li > a:focus::before{
+  transform: scaleX(1);
+}
+
+/*social media icons*/
+.fa {
+  margin: 10px 5px;
+  padding: 10px 10px;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.fa:hover {
+  opacity: 0.8;
+}
+
+/* Slideshow container */
+.carousel-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.carousel-slide {
+  display:none;
+}
+
+.carousel-container::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6 ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Modal */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.lightbox-content{
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration:none;
+  cursor: pointer;
+}
+
+.lightbox-slides{
+  display:none;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow{
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*
+.carousel-container {
+  width: 900px;
+  margin: auto;
+  overflow: hidden;
+  align-items: center;
+}
+
+.carousel-slide {
+  display: flex;
+  width:100%;
+  height: 80%;
+  max-width: 100%;
+  max-height: 100%;
+  float: center;
+}
+*/
