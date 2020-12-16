@@ -7,16 +7,39 @@ body{
 }
 
 .name {
-  margin: 10px 10px;
-  padding: 10px;
-  text-align: center;
+  margin: 5px 5px;
+  padding: 5px;
+  float: left;
   font-family: 'Playfair Display', serif;
 }
+
+.best-work {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.best-work::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  margin-left: -40px;
+  left: 50%;
+  bottom: 40px;
+  background-color: black;
+}
+
+
+
+/*-------------HEADER SECTION------------*/
 
 .navigation-bar {
   width: 100%;
   margin: 0;
   text-align: center;
+  margin: 0px 0px;
 }
 
 .fa-twitter{
@@ -25,6 +48,10 @@ body{
 }
 
 .fa-instagram {
+  color: black;
+}
+
+.fa-linkedin {
   color: black;
 }
 
@@ -74,7 +101,7 @@ nav ul > li > a {
   content: '';
   position: absolute;
   height: var(--border-size);
-  background-color: lightgray;
+  background-color: black;
   transform: scaleX(0);
   top: 0;
   right:0;
@@ -124,7 +151,7 @@ nav ul > li > a::before {
   content: '';
   position: absolute;
   height: var(--border-size);
-  background-color: lightgray;
+  background-color: black;
   transform: scaleX(0);
   top: 0;
   right:0;
@@ -150,11 +177,15 @@ nav ul > li > a:focus::before{
   opacity: 0.8;
 }
 
+
+/*-------------CAROUSEL SECTION------------*/
+
 /* Slideshow container */
 .carousel-container {
   max-width: 900px;
   position: relative;
   margin: auto;
+  padding-top: 50px;
 }
 
 /* Hide the images by default */
@@ -224,6 +255,8 @@ nav ul > li > a:focus::before{
   to {opacity: 1}
 }
 
+/*-------------LIGHTBOX SECTION------------*/
+
 /* Modal */
 .lightbox {
   display: none;
@@ -283,20 +316,266 @@ img.hover-shadow{
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/*
-.carousel-container {
-  width: 900px;
-  margin: auto;
-  overflow: hidden;
-  align-items: center;
+
+/*-------------ABOUT ME SECTION------------*/
+
+.about-me {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  
 }
 
-.carousel-slide {
-  display: flex;
-  width:100%;
-  height: 80%;
-  max-width: 100%;
-  max-height: 100%;
-  float: center;
+.about-me:after {
+  content: '';
+  display: block;
+  clear: both;
 }
-*/
+
+.about-me h2 {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.about-me h2::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  margin-left: -40px;
+  left: 50%;
+  bottom: 40px;
+  background-color: black;
+}
+
+.about-me .col-left, .about-me .col-right {
+  width: 40%;
+  float: left;
+}
+
+.about-me .col-left {
+  text-align: justify;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.about-me .col-left img {
+  max-width: 100%;
+  border-radius: 50px;
+}
+
+.about-me .col-right {
+  font-family: 'Oswald', sans-serif;
+  text-transform: none;
+}
+
+.about-me a {
+  text-decoration: none;
+  background-color: black;
+  padding: 10px 25px;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+}
+
+.about-me a:hover {
+  background-color: grey;
+  color: black;  
+}
+
+/*-------------PORTFOLIO SECTION------------*/
+.main {
+  max-width: 100%;
+  margin: auto;
+  align-items: flex-start;
+}
+
+.main h2 {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.main h2::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  margin-left: -40px;
+  left: 50%;
+  bottom: 40px;
+  background-color: black;
+}
+
+.row {
+  margin: 8px -16px;
+  
+}
+
+.row, .row .album {
+  padding: 20px;
+  
+}
+
+.album {
+  float: left;
+  width: 20%;
+  margin-left: 30px;
+}
+
+.album::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.album-content {
+  background-color: #f2f2f2;
+  padding: 10px;
+  
+}
+
+.album-content h3 {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  .album {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .album {
+    width: 100%;
+  }
+}
+
+.trial-run, .syu {
+  width: 100%;
+}
+
+/*-------------CONTACT SECTION------------*/
+
+.contact-me {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.contact-me h2 {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.contact-me h2::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  margin-left: -40px;
+  left: 50%;
+  bottom: 40px;
+  background-color: black;
+}
+section { 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif;
+  flex-direction: column;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0pc 0px 20px #00000010;
+  background-color: #e6e6e6;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  margin-top: 5px;
+  font-family: 'Merriweather', serif;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  text-transform: uppercase;
+  transition: 0.3s ease background-color;
+}
+
+button[type="submit"]:hover {
+  background-color:#e6ffff;
+}
+
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+#status.success {
+  background-color: green;
+  animation: status 4s ease forwards;
+}
+
+#status.error {
+  background-color: red;
+  animation: status 4s ease forwards;
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
