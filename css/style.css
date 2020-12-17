@@ -90,11 +90,13 @@ nav ul > li > a {
   text-decoration: none;
   text-transform: uppercase;
   
+  
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
+  
 }
 
 .dropbtn::before{
@@ -121,7 +123,7 @@ nav ul > li > a {
   font-size: 10px;
   display: none;
   text-decoration: none;
-  text-transform: uppercase;
+  
   position: absolute;
   text-align: left;
 
@@ -135,7 +137,7 @@ nav ul > li > a {
   font-size: 10px;
   display: block;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 /*dropdown animation*/
@@ -459,6 +461,45 @@ img.hover-shadow{
 .trial-run, .syu, .work-in-progress {
   width: 100%;
 }
+
+
+/*-------------GALLERY SECTION------------*/
+
+.gallery {
+  display: flex;
+  margin-top: 20px;
+  padding: 20px 4px;
+  flex-direction: row;
+  
+}
+
+.gallery-content {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 5px;
+}
+
+.gallery-content img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .gallery {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
 
 /*-------------CONTACT SECTION------------*/
 
