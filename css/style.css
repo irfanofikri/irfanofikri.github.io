@@ -185,7 +185,7 @@ nav ul > li > a:focus::before{
   max-width: 900px;
   position: relative;
   margin: auto;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 /* Hide the images by default */
@@ -211,11 +211,11 @@ nav ul > li > a:focus::before{
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
+  margin-top: 30px;
   padding: 16px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 30px;
   transition: 0.6 ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -321,8 +321,7 @@ img.hover-shadow{
 
 .about-me {
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 20px;
   
 }
 
@@ -411,10 +410,7 @@ img.hover-shadow{
   background-color: black;
 }
 
-.row {
-  margin: 8px -16px;
-  
-}
+
 
 .row, .row .album {
   padding: 20px;
@@ -434,13 +430,17 @@ img.hover-shadow{
 }
 
 .album-content {
-  background-color: #f2f2f2;
+  background-color: #d9d9d9;
   padding: 10px;
   
 }
 
 .album-content h3 {
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+}
+
+.album-content p {
   font-family: 'Oswald', sans-serif;
 }
 
@@ -456,7 +456,7 @@ img.hover-shadow{
   }
 }
 
-.trial-run, .syu {
+.trial-run, .syu, .work-in-progress {
   width: 100%;
 }
 
@@ -464,8 +464,7 @@ img.hover-shadow{
 
 .contact-me {
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 20px;
 }
 .contact-me h2 {
   text-align: center;
@@ -554,12 +553,12 @@ button[type="submit"]:hover {
 }
 
 #status.success {
-  background-color: green;
+  background-color: #99ffbb;
   animation: status 4s ease forwards;
 }
 
 #status.error {
-  background-color: red;
+  background-color: #ff1a1a;
   animation: status 4s ease forwards;
 }
 
